@@ -15,5 +15,8 @@ RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker &&\
 RUN pip3 install\
  edgar\
  Gutenberg
+RUN conda install --quiet --yes -c conda-forge\
+ fastparquet\
+ pyarrow
 USER $NB_UID
 
