@@ -18,5 +18,6 @@ RUN pip3 install\
 RUN conda install --quiet --yes -c conda-forge\
  fastparquet\
  pyarrow
+RUN python3 -m nltk.downloader -d /usr/share/nltk_data all
 USER $NB_UID
 
