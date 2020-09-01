@@ -1,5 +1,7 @@
 # Text Mining With Python
 
+The associated "Introduction to HPC and M2" slides can be found [here](https://smu.box.com/s/y54cbtazhe9enfaomvb8eaxoi99jq0cn).
+
 ## Running the Notebook via JupyterLab on M2
 
 1.  Go to [hpc.smu.edu](https://hpc.smu.edu/)
