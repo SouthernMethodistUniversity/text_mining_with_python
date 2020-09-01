@@ -32,8 +32,8 @@
 ## Running the Notebook via JupyterLab via a Local Docker Installation
 
 1. Install [Docker](https://docs.docker.com/get-docker/) and run commands below in terminal shell of your choice.
-1. Clone repository, `git clone https://github.com/SouthernMethodistUniversity/text_mining_with_python.git`.
-2. Change to repository directory, `cd text_mining_with_python`.
-3. `docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $HOME:/home/jovyan rkalescky/text_mining_with_python:latest`
-4. Copy and paste the last URL given into your web browser and the JupyterLab graphical interface will be presented.
+2. Clone repository, `git clone https://github.com/SouthernMethodistUniversity/text_mining_with_python.git`.
+3. Change to repository directory, `cd text_mining_with_python`.
+4. `docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $HOME:/home/jovyan rkalescky/text_mining_with_python:latest`
+5. Copy and paste the last URL given into your web browser and the JupyterLab graphical interface will be presented.
 
