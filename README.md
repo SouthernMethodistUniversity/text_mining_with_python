@@ -29,8 +29,9 @@
     Interactive Sessions" tab in your browser and select "Delete" and "Confirm",
     when prompted, to cancel the job on M2.
 
-## Docker
+## Running the Notebook via JupyterLab via a Local Docker Installation
 
+1. Install [Docker](https://docs.docker.com/get-docker/) and run commands below in terminal shell of your choice.
 1. Clone repository, `git clone https://github.com/SouthernMethodistUniversity/text_mining_with_python.git`.
 2. Change to repository directory, `cd text_mining_with_python`.
 3. `docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $HOME:/home/jovyan rkalescky/text_mining_with_python:latest`
