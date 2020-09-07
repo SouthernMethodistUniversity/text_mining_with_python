@@ -7,9 +7,9 @@ The associated "Introduction to HPC and M2" slides can be found [here](https://s
 1.  Go to [hpc.smu.edu](https://hpc.smu.edu/)
 2.  Sign in using your SMU ID and SMU password
 3.  Select "ManeFrame II Shell Access" from the "Clusters" drop-down menu.
-4.  Clone repository, `git clone https://github.com/SouthernMethodistUniversity/text_mining_with_python.git`.
-5.  Change to repository directory, `cd text_mining_with_python`.
-6.  Select "JupyterLab" from the "Interactive Apps" drop-down menu.
+4.  In the "Shell" tab type `git clone https://github.com/SouthernMethodistUniversity/text_mining_with_python.git` to clone the GitHub repository.
+5.  In the same "Shell" tab type `cd text_mining_with_python` to change to repository's directory to verify that it has been clone properly. (Typing `ls` should show files that have been downloaded.)
+6.  In the "Dashboard" tab select "JupyterLab" from the "Interactive Apps" drop-down menu.
 7. Set the "Additional environment modules to load" field to `environment`.
 8. Set the "Custom module paths" field to `module use $HOME/text_mining_with_python`.
 9. Select other options required for your Jupyter instance. These options are the
