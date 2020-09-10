@@ -30,6 +30,8 @@ The associated "Introduction to HPC and M2" slides can be found [here](https://s
 15. When finished using the JupyterLab instance, return to the "My
     Interactive Sessions" tab in your browser and select "Delete" and "Confirm",
     when prompted, to cancel the job on M2.
+    
+**NOTE:** To be sure you have the latest version of the environment and code. Everytime you log-in, you should go to "ManeFrame II Shell Access" from the "Clusters" drop-down menu and paste this command `cd text_mining_with_python && git pull` then hit "Enter".
 
 ## Running the Notebook via JupyterLab via a Local Docker Installation
 
