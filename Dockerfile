@@ -5,7 +5,11 @@ RUN conda install --quiet --yes\
  textblob\
  wordcloud\
  bsddb3\
- jupytext
+ jupytext\
+ fastparquet\
+ pyarrow\
+ python-snappy\
+ spacy
 RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker &&\
  jupyter labextension install @aquirdturtle/collapsible_headings &&\
  jupyter labextension install @jupyterlab/toc &&\
@@ -15,11 +19,7 @@ RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker &&\
 RUN pip3 install\
  edgar\
  Gutenberg
-RUN conda install --quiet --yes -c conda-forge\
- fastparquet\
- pyarrow
 RUN python3 -m nltk.downloader -d /usr/share/nltk_data all
-RUN conda install --quiet --yes -c conda-forge\
- python-snappy
+RUN python3 -m spacy download en_core_web_sm
 USER $NB_UID
 
