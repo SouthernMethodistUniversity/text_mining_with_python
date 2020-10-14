@@ -21,5 +21,6 @@ RUN pip3 install\
  Gutenberg
 RUN python3 -m nltk.downloader -d /usr/share/nltk_data all
 RUN python3 -m spacy download en_core_web_sm
+RUN pip3 install nbresuse
 USER $NB_UID
 
