@@ -1,3 +1,6 @@
+# docker build -t smuresearch/text_mining_with_python:latest .
+# docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $HOME:/home/jovyan smuresearch/text_mining_with_python:latest
+
 FROM jupyter/datascience-notebook
 USER root
 RUN conda install --quiet --yes\
@@ -18,7 +21,8 @@ RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker &&\
  jupyter nbextension enable --py jupytext
 RUN pip3 install\
  edgar\
- Gutenberg
+ Gutenberg\
+ num2words
 RUN python3 -m nltk.downloader -d /usr/share/nltk_data all
 RUN python3 -m spacy download en_core_web_sm
 RUN pip3 install nbresuse
