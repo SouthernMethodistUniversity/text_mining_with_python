@@ -1,6 +1,6 @@
 always_load("singularity/3.5.3")
 
-local sif_hash = '8db0437ec0108b1b59be6416bcf632948c51169f091e48a4cf4cebc896bbb50a'
+local sif_hash = '995e52f7cf976eaefe2a3ac830c8b5f5116371027da62d0378a1c9b648eb02b0'
 local sif_file = '/hpc/applications/singularity_containers/text_mining_with_python_sha256.' .. sif_hash .. '.sif'
 
 function build_command(app, sif)
