@@ -1,4 +1,4 @@
-always_load("singularity")
+always_load("singularity/3.5.3")
 
 function build_command(app)
   local container = 'docker://smuresearch/text_mining_with_python:latest '
