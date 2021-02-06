@@ -11,6 +11,7 @@ function build_command(app)
 end
 
 setenv("TMPDIR", "/dev/shm")
+setenv("SINGULARITYENV_MPLCONFIGDIR", "/dev/shm")
 local memory = os.getenv("SLURM_MEM_PER_NODE") or capture("awk '/MemTotal/{print $2}' /proc/meminfo") / 1024^2
 setenv("SINGULARITYENV_MEM_LIMIT", memory * 1024^2)
 
