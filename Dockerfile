@@ -1,8 +1,14 @@
 # docker build -t smuresearch/text_mining_with_python:latest .
 # docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v $HOME:/home/jovyan smuresearch/text_mining_with_python:latest
 
-FROM jupyter/datascience-notebook:lab-2.2.9
+FROM jupyter/datascience-notebook:lab-3.0.5
+LABEL maintainer "Robert Kalescky <rkalescky@smu.edu>"
+
 USER root
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update &&\
+ apt-get install -y\
+ zsh
 RUN conda install --quiet --yes\
  nltk\
  textblob\
