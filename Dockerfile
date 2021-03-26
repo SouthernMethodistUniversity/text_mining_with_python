@@ -21,6 +21,7 @@ RUN conda install --quiet --yes\
  spacy\
  gensim\
  adjusttext\
+ openpyxl\
  jupyter-resource-usage
 RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker &&\
  jupyter labextension install @aquirdturtle/collapsible_headings &&\
