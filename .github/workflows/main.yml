@@ -58,12 +58,7 @@ jobs:
        ls
        singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
        ls
-  deploy:
-    needs: singularity
-    steps:
-    - name: Check out code for the container build
-      uses: actions/checkout@v1
-    - name: copy file via ssh password
+    - name: Deploy container
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.M2_HOST }}
