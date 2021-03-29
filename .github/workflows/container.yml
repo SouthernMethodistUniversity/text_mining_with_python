@@ -18,12 +18,8 @@ jobs:
 
     - name: Build Container
       run: |
+       echo "Present working directory: $PWD"
        ls
-       if [ -f "${SINGULARITY_RECIPE}" ]; then
-           singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
-       else
-           echo "${SINGULARITY_RECIPE} is not found."
-           echo "Present working directory: $PWD"
-           ls
-       fi
+       singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
+       ls
 
