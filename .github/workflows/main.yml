@@ -64,6 +64,6 @@ jobs:
         host: ${{ secrets.M2_HOST }}
         username: ${{ secrets.M2_USERNAME }}
         key: ${{ secrets.M2_KEY }}
-        port: ${{ secrets.M2_PORT }}
+        passphrase: ${{ secrets.M2_KEY_PASSPHRASE }}
         source: "container.sif"
         target: "/hpc/applications/containers"
