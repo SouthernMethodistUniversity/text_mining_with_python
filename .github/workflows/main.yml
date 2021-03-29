@@ -5,7 +5,7 @@ on:
       - 'Dockerfile'
       - '.github/workflows/main.yml'
 jobs:
-  build:
+  docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,3 +38,25 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+  singularity:
+    needs: docker
+    name: Singularity
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        singularity_version:
+          - '3.5.3'
+    container:
+      image: quay.io/singularity/singularity:v${{ matrix.singularity_version }}
+      options: --privileged
+    steps:
+    - name: Check out code for the container build
+      uses: actions/checkout@v1
+
+    - name: Build Container
+      run: |
+       echo "Present working directory: $PWD"
+       ls
+       singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
+       ls
+
