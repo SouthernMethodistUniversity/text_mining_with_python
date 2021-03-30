@@ -56,6 +56,7 @@ jobs:
       run: |
        echo "Present working directory: $PWD"
        which scp
+       ssh-add - <<< ${{ secrets.M2_KEY }}
 #       singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
 #     - name: Deploy container
 #       uses: appleboy/scp-action@master
