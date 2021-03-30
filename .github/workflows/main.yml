@@ -55,10 +55,8 @@ jobs:
     - name: Build Container
       run: |
        echo "Present working directory: $PWD"
-#       ls
-#       singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
-       ls
        which scp
+#       singularity pull -F container.sif docker://smuresearch/text_mining_with_python:latest
 #     - name: Deploy container
 #       uses: appleboy/scp-action@master
 #       with:
