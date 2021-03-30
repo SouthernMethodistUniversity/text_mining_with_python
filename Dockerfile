@@ -10,6 +10,7 @@ RUN apt-get update &&\
  apt-get install -y\
  zsh
 RUN conda install --quiet --yes\
+ pandas\
  nltk\
  textblob\
  wordcloud\
